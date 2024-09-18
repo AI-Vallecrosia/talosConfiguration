@@ -1,16 +1,21 @@
+VERSION_CLUSTER_TOOL=v1.0.0-BETA-4
+NAME_ARCHIVE=clustertool_1.0.0-BETA-4_linux_amd64
+DIR_CLUSTER_TOOL=clusterTool
 
 
 
-all: clusterTool/clustertool
+ARCHIVE=$(NAME_ARCHIVE).tar.gz
+
+all: $(DIR_CLUSTER_TOOL)/clustertool
 
 
-clusterTool/clustertool: clusterTool/clustertool_linux_amd64.tar.gz
-	tar -zxvf $< -C clusterTool/
+$(DIR_CLUSTER_TOOL)/clustertool: $(DIR_CLUSTER_TOOL)/$(ARCHIVE)
+	tar -zxvf $< -C $(DIR_CLUSTER_TOOL)/
 
 
-clusterTool/clustertool_linux_amd64.tar.gz:
-	mkdir -p clusterTool
-	wget https://github.com/truecharts/clustertool-public/releases/download/v1.0.0-ALPHA-12/clustertool_linux_amd64.tar.gz -P clusterTool/
+$(DIR_CLUSTER_TOOL)/$(ARCHIVE):
+	mkdir -p $(DIR_CLUSTER_TOOL)
+	wget https://github.com/truecharts/clustertool-public/releases/download/$(VERSION_CLUSTER_TOOL)/$(ARCHIVE) -P $(DIR_CLUSTER_TOOL)/
 	
 
 
@@ -19,4 +24,4 @@ clusterTool/clustertool_linux_amd64.tar.gz:
 
 
 clean:
-	rm -r clusterTool/*
+	rm -fr $(DIR_CLUSTER_TOOL)/*
