@@ -4,4 +4,5 @@ metadata:
   name: schematics
   namespace: system-upgrade
 data:
-REPLACEWITHSCHEMATICMAP
+
+  10.0.10.13: dc2c29fc8374161b858245a14658779154bf11aa9c23a04813fa8f298fcd0bfc
