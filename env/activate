@@ -21,12 +21,13 @@ deactivate() {
     # Self destruct!
         unset -f deactivate
     fi
+    unset _envTC_Activated
 }
 if [ -z "$_envTC_Activated" ]; then
 
 deactivate nondestructive
 _OLD_VIRTUAL_PATH="$PATH"
-PATH="${curr_dir}:$PATH"
+PATH="${curr_dir}:$(realpath ${curr_dir}/../clusterTool):$PATH"
 export PATH
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
