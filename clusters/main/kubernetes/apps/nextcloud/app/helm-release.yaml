@@ -74,7 +74,7 @@ spec:
         jwt: ""
         jwt_header: Authorization
     ingress:
-      nextcloud:
+      main:
         enabled: true
         primary: true
         hosts:
