@@ -40,11 +40,14 @@ spec:
               - path: /
                 overrideService:
                   name: main
-                  port: 80
+                  port: 10591
         tls:
           - hosts:
               - wordpress.local
-    service:
-      main:
-        type: LoadBalancer
-        loadBalancerIP: 10.0.10.60
+        integrations:
+          traefik:
+            enabled: true
+  #  service:
+  #    main:
+  #      type: LoadBalancer
+  #      loadBalancerIP: 10.0.10.60
