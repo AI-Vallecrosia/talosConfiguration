@@ -88,7 +88,7 @@ spec:
           traefik:
             enabled: true
     persistence:
-      data:
-        type: nfs 
-        path: /mnt/AI_Storage/Nextcloud_storage
-        server: "10.0.10.10"
+      #data:
+      #  type: nfs 
+      #  path: /mnt/AI_Storage/Nextcloud_storage
+      #  server: "10.0.10.10"
