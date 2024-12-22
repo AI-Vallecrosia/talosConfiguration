@@ -78,7 +78,7 @@ spec:
         enabled: true
         primary: true
         hosts:
-          - host: nextcloud.local
+          - host: nextcloud.cloud.local
             paths:
               - path: /
                 overrideService:
@@ -86,7 +86,7 @@ spec:
                   port: 8080
         tls:
           - hosts:
-              - nextcloud.local
+              - nextcloud.cloud.local
         integrations:
           traefik:
             enabled: true

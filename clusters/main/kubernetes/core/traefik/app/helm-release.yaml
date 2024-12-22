@@ -43,7 +43,7 @@ spec:
         enabled: true
         #primary: true
         hosts:
-          - host: traefik.local
+          - host: traefik.cloud.local
             #paths:
             #  - path: /
             #    overrideService:
@@ -51,4 +51,4 @@ spec:
             #      port: 80
         tls:
           - hosts:
-              - traefik.local
+              - traefik.cloud.local

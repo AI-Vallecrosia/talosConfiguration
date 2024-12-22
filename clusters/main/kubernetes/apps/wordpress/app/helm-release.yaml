@@ -35,7 +35,7 @@ spec:
         enabled: true
         primary: true
         hosts:
-          - host: wordpress.local
+          - host: wordpress.cloud.local
             paths:
               - path: /
                 overrideService:
@@ -43,7 +43,7 @@ spec:
                   port: 10591
         tls:
           - hosts:
-              - wordpress.local
+              - wordpress.cloud.local
         integrations:
           traefik:
             enabled: true
