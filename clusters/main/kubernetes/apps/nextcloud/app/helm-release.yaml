@@ -87,3 +87,8 @@ spec:
         integrations:
           traefik:
             enabled: true
+    persistence:
+      data:
+        type: nfs 
+        path: /mnt/AI_Storage/Nexcloud_storage
+        server: "10.0.10.10"
