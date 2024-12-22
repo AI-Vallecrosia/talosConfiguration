@@ -30,6 +30,20 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    ingress:
+      wordpress:
+        enabled: true
+        #primary: true
+        hosts:
+          - host: wordpress.local
+            #paths:
+            #  - path: /
+            #    overrideService:
+            #      name: main
+            #      port: 80
+        tls:
+          - hosts:
+              - wordpress.local
     service:
       main:
         type: LoadBalancer
