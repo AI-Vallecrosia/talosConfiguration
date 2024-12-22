@@ -32,9 +32,15 @@ spec:
   values:
     service:
       main:
-        enabled: true
-        type: ExternalIP
-        externalIP: 10.0.10.51
+        type: LoadBalancer
+        loadBalancerIP: 10.0.10.61
+        ports:
+          main:
+            port: 8123
+      #main:
+      #  enabled: true
+      #  type: ExternalIP
+      #  externalIP: 10.0.10.51
     ingress:
       main:
         enabled: true
