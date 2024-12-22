@@ -44,21 +44,21 @@ spec:
         ports:
           main:
             port: 8123
-    ingress:
-      main:
-        enabled: true
-        primary: true
-        hosts:
-          - host: home-assistant.cloud.local
-            paths:
-              - path: /
-                overrideService:
-                  name: main
-                  port: 8123
-        tls:
-          - hosts:
-              - home-assistant.cloud.local
-        integrations:
-          traefik:
-            enabled: true
+    #ingress:
+    #  main:
+    #    enabled: true
+    #    primary: true
+    #    hosts:
+    #      - host: home-assistant.cloud.local
+    #        paths:
+    #          - path: /
+    #            overrideService:
+    #              name: main
+    #              port: 8123
+    #    tls:
+    #      - hosts:
+    #          - home-assistant.cloud.local
+    #    integrations:
+    #      traefik:
+    #        enabled: true
    
