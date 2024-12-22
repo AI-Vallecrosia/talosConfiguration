@@ -40,7 +40,7 @@ spec:
               - path: /
                 overrideService:
                   name: main
-                  port: 8090
+                  port: 10184
         tls:
           - hosts:
               - ispy-agent-dvr.cloud.local
