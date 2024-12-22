@@ -30,6 +30,13 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    persistence:
+      nvr-recordings:
+        enabled: true
+        type: nfs 
+        mountPath: /mnt/nvr-recordings
+        path: /mnt/DVR/ISPY-Recordings
+        server: "10.0.10.10"
     ingress:
       main:
         enabled: true
