@@ -31,12 +31,12 @@ spec:
     keepHistory: false
   values:
     service:
-      #main:
-      #  type: LoadBalancer
-      #  loadBalancerIP: 10.0.10.61
-      #  ports:
-      #    main:
-      #      port: 8123
+      main:
+        type: LoadBalancer
+        loadBalancerIP: 10.0.10.61
+        ports:
+          main:
+            port: 8123
 
     ingress:
       main:
