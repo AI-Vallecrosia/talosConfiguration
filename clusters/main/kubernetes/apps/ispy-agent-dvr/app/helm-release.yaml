@@ -30,9 +30,6 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    service:
-      main:
-        externalIP: 10.0.10.35
     ingress:
       main:
         enabled: true
