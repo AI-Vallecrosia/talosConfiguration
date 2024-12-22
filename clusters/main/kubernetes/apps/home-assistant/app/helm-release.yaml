@@ -31,16 +31,19 @@ spec:
     keepHistory: false
   values:
     service:
+      #main:
+      #  type: LoadBalancer
+      #  loadBalancerIP: 10.0.10.61
+      #  ports:
+      #    main:
+      #      port: 8123
       main:
-        type: LoadBalancer
-        loadBalancerIP: 10.0.10.61
+        enabled: true
+        type: ExternalIP
+        externalIP: 10.0.10.61
         ports:
           main:
             port: 8123
-      #main:
-      #  enabled: true
-      #  type: ExternalIP
-      #  externalIP: 10.0.10.51
     ingress:
       main:
         enabled: true
