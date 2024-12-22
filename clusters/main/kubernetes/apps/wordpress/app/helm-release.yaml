@@ -33,14 +33,14 @@ spec:
     ingress:
       wordpress:
         enabled: true
-        #primary: true
+        primary: true
         hosts:
           - host: wordpress.local
-            #paths:
-            #  - path: /
-            #    overrideService:
-            #      name: main
-            #      port: 80
+            paths:
+              - path: /
+                overrideService:
+                  name: main
+                  port: 80
         tls:
           - hosts:
               - wordpress.local
