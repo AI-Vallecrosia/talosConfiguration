@@ -38,9 +38,6 @@ spec:
           - host: wordpress.cloud.local
             paths:
               - path: /
-                overrideService:
-                  name: main
-                  port: 10591
         tls:
           - hosts:
               - wordpress.cloud.local

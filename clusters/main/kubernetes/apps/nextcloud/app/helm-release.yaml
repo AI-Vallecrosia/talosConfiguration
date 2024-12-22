@@ -81,9 +81,6 @@ spec:
           - host: nextcloud.cloud.local
             paths:
               - path: /
-                overrideService:
-                  name: main
-                  port: 8080
         tls:
           - hosts:
               - nextcloud.cloud.local
