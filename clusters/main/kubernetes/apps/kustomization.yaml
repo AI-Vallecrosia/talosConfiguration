@@ -7,3 +7,4 @@ resources:
   - home-assistant/ks.yaml
   - ispy-agent-dvr/ks.yaml
   - stag-wordpress/ks.yaml
+  - genea/ks.yaml
