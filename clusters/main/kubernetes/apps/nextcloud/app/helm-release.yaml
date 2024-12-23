@@ -86,6 +86,7 @@ spec:
         tls:
           - hosts:
               - nextcloud.cloud.local
+              - nextcloud.aivallecrosia.com
         integrations:
           traefik:
             enabled: true
