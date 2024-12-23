@@ -1,0 +1,94 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: nextcloud
+      version: 32.2.12
+      sourceRef:
+        kind: HelmRepository
+        name: truecharts
+        namespace: flux-system
+      interval: 15m
+  timeout: 20m
+  maxHistory: 3
+  driftDetection:
+    mode: warn
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    nextcloud:
+      credentials:
+        initialAdminUser: admin
+        initailAdminPassword: CHANGEME
+      general:
+        default_phone_region: IT
+        accessIP: ${TRAEFIK_IP}
+    
+      clamav:
+        enabled: true
+        stream_max_length: 26214400
+        file_max_size: -1
+        infected_action: only_log
+      # Notify Push (Allows Nextcloud to notify clients of changes, instead of clients having to poll. A Notify Push container will be deployed automatically). This is highly recommended to keep enabled.
+      notify_push:
+        enabled: true
+      # Collabora (document editor for Nextcloud. A Collabora container will be deployed automatically.
+      collabora:
+        enabled: true
+        # default|compact|tabbed
+        interface_mode: default
+        username: admin
+        password: changeme
+        dictionaries:
+          - de_DE
+          - en_GB
+          - en_US
+          - el_GR
+          - es_ES
+          - fr_FR
+          - pt_BR
+          - pt_PT
+          - it
+          - nl
+          - ru
+      # Only Office (document editor for Nextcloud, this does **NOT** deploy the Only Office container. You will need to have a separate installation.
+      onlyoffice:
+        enabled: false
+        url: ""
+        internal_url: ""
+        verify_ssl: true
+        jwt: ""
+        jwt_header: Authorization
+    ingress:
+      main:
+        enabled: true
+        primary: true
+        hosts:
+          - host: nextcloud.cloud.local
+            paths:
+              - path: /
+        tls:
+          - hosts:
+              - nextcloud.cloud.local
+        integrations:
+          traefik:
+            enabled: true
+    persistence:
+      data:
+        type: nfs 
+        path: /mnt/AI_Storage/Nextcloud_storage
+        server: "10.0.10.10"
