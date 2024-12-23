@@ -40,16 +40,16 @@ spec:
         enabled: true
         primary: true
         hosts:
-          - host: wordpress.cloud.local
+          - host: www.aivallecrosia.com
             paths:
               - path: /
-          - host: www.aivallecrosia.com
+          - host: wordpress.cloud.local
             paths:
               - path: /
         tls:
           - hosts:
-              - wordpress.cloud.local
               - www.aivallecrosia.com
+              - wordpress.cloud.local
         integrations:
           traefik:
             enabled: true
