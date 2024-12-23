@@ -44,7 +44,3 @@ spec:
         integrations:
           traefik:
             enabled: true
-  #  service:
-  #    main:
-  #      type: LoadBalancer
-  #      loadBalancerIP: 10.0.10.60
