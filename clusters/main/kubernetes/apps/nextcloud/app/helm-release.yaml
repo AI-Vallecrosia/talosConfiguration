@@ -80,7 +80,6 @@ spec:
           - host: nextcloud.cloud.local
             paths:
               - path: /
-        hosts:
           - host: nextcloud.aivallecrosia.com
             paths:
               - path: /
