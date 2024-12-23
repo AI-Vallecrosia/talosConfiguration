@@ -33,7 +33,7 @@ spec:
     nextcloud:
       credentials:
         initialAdminUser: admin
-        initailAdminPassword: CHANGEME
+        initailAdminPassword: adminpass
       general:
         default_phone_region: IT
         accessIP: ${TRAEFIK_IP}
@@ -76,7 +76,6 @@ spec:
     ingress:
       main:
         enabled: true
-        primary: true
         hosts:
           - host: nextcloud.cloud.local
             paths:
