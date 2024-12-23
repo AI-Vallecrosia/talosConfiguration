@@ -77,16 +77,16 @@ spec:
       main:
         enabled: true
         hosts:
-          - host: nextcloud.cloud.local
+          - host: nextcloud.aivallecrosia.com
             paths:
               - path: /
-          - host: nextcloud.aivallecrosia.com
+          - host: nextcloud.cloud.local
             paths:
               - path: /
         tls:
           - hosts:
-              - nextcloud.cloud.local
               - nextcloud.aivallecrosia.com
+              - nextcloud.cloud.local
         integrations:
           traefik:
             enabled: true
