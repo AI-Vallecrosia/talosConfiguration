@@ -31,9 +31,13 @@ spec:
     keepHistory: false
   values:
     persistence:
+      data:
+        type: nfs 
+        path: /mnt/AI_SSD/Wordpress_storage/stag/data/
+        server: "10.0.10.10"
       config:
         type: nfs 
-        path: /mnt/AI_SSD/Wordpress_configuration/stag
+        path: /mnt/AI_SSD/Wordpress_storage/stag/conf/
         server: "10.0.10.10"
     ingress:
       wordpress:
