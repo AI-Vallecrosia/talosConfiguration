@@ -32,13 +32,17 @@ spec:
   values:
     persistence:
       data:
+        enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/stag/data/
         server: "10.0.10.10"
+        mountPath: /bitnami/mariadb
       config:
+        enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/stag/conf/
         server: "10.0.10.10"
+        mountPath: /bitnami/wordpress
     ingress:
       wordpress:
         enabled: true

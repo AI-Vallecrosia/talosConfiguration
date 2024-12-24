@@ -36,11 +36,13 @@ spec:
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/prod/data/
         server: "10.0.10.10"
+        mountPath: /bitnami/mariadb
       config:
         enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/prod/conf/
         server: "10.0.10.10"
+        mountPath: /bitnami/wordpress
     ingress:
       wordpress:
         enabled: true
