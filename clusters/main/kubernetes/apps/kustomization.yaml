@@ -6,7 +6,6 @@ resources:
   - nextcloud/ks.yaml
   - home-assistant/ks.yaml
   - ispy-agent-dvr/ks.yaml
-  - stag-wordpress/ks.yaml
   - genea/ks.yaml
   - jellyfin/ks.yaml
   - navidrome/ks.yaml
