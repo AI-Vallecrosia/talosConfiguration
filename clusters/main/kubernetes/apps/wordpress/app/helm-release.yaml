@@ -34,19 +34,22 @@ spec:
       data:
         targetSelector:
           wordpress-mariadb:
+            wordpress-mariadb:
+              mountPath: /bitnami/mariadb
         enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/data/
         server: "10.0.10.10"
-        mountPath: /bitnami/mariadb
+        
       config:
         targetSelector:
-          wordpress:       
+          wordpress:
+            wordpress:
+              mountPath: /bitnami/wordpress
         enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/conf/
         server: "10.0.10.10"
-        mountPath: /bitnami/wordpress
     ingress:
       wordpress:
         enabled: true
