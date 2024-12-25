@@ -38,6 +38,15 @@ spec:
     service:
       tcp:
         loadBalancerIP: ${TRAEFIK_IP}
+        ports:
+          web:
+            forwardedHeaders:
+              enabled: true
+              trustedIPs: ["10.0.10.1"]
+          websecure:
+            forwardedHeaders:
+              enabled: true
+              trustedIPs: ["10.0.10.1"]
     ingress:
       main:
         enabled: true
