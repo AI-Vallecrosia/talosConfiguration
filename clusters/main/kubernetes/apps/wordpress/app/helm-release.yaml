@@ -32,20 +32,22 @@ spec:
   values:
     persistence:
       data:
-        targetSelector:
-          wordpress-mariadb:
-            wordpress-mariadb:
-              mountPath: /bitnami/mariadb
+        targetSelectAll: true
+        #targetSelector:
+        #  wordpress-mariadb:
+        #    wordpress-mariadb:
+        mountPath: /bitnami/mariadb
         enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/data/
         server: "10.0.10.10"
         
       config:
-        targetSelector:
-          wordpress:
-            wordpress:
-              mountPath: /bitnami/wordpress
+        targetSelectAll: true
+        #targetSelector:
+        #  wordpress:
+        #    wordpress:
+        mountPath: /bitnami/wordpress
         enabled: true
         type: nfs 
         path: /mnt/AI_SSD/Wordpress_storage/conf/
