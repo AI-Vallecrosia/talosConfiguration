@@ -31,18 +31,21 @@ spec:
     keepHistory: false
   values:
     persistence:
-      data:
-        enabled: true
-        type: nfs 
-        path: /mnt/AI_SSD/Wordpress_storage/data/
-        server: "10.0.10.10"
-        mountPath: /bitnami/mariadb
-      config:
-        enabled: true
-        type: nfs 
-        path: /mnt/AI_SSD/Wordpress_storage/conf/
-        server: "10.0.10.10"
-        mountPath: /bitnami/wordpress
+      targetSelector:
+        wordpress-mariadb:
+          data:
+            enabled: true
+            type: nfs 
+            path: /mnt/AI_SSD/Wordpress_storage/data/
+            server: "10.0.10.10"
+            mountPath: /bitnami/mariadb
+        wordpress:  
+          config:
+            enabled: true
+            type: nfs 
+            path: /mnt/AI_SSD/Wordpress_storage/conf/
+            server: "10.0.10.10"
+            mountPath: /bitnami/wordpress
     ingress:
       wordpress:
         enabled: true
