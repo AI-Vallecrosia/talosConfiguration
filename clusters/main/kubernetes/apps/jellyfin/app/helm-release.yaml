@@ -30,6 +30,13 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    persistence:
+      data:
+        mountPath: /Movies
+        enabled: true
+        type: nfs 
+        path: /mnt/AI_Storage/Movies
+        server: "10.0.10.10"
     ingress:
       main:
         enabled: true
