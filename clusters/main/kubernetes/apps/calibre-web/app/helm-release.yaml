@@ -30,6 +30,13 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    persistence:
+      data:
+        mountPath: /Books
+        enabled: true
+        type: nfs 
+        path: /mnt/AI_Storage/Calibre_library
+        server: "10.0.10.10"
     ingress:
       main:
         enabled: true
