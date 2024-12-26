@@ -42,9 +42,13 @@ spec:
           - host: navidrome.cloud.local
             paths:
               - path: /
+          - host: navidrome.aivallecrosia.com
+            paths:
+              - path: /
         tls:
           - hosts:
               - navidrome.cloud.local
+              - navidrome.aivallecrosia.com
         integrations:
           traefik:
             enabled: true
