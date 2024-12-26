@@ -2,14 +2,14 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: calibre-web
-  namespace: calibre-web
+  name: calibre
+  namespace: calibre
 spec:
   interval: 15m
   chart:
     spec:
-      chart: calibre-web
-      version: 20.2.8
+      chart: calibre
+      version: 16.10.2
       sourceRef:
         kind: HelmRepository
         name: truecharts
@@ -41,12 +41,12 @@ spec:
       main:
         enabled: true
         hosts:
-          - host: calibre-web.cloud.local
+          - host: calibre.cloud.local
             paths:
               - path: /
         tls:
           - hosts:
-              - calibre-web.cloud.local
+              - calibre.cloud.local
         integrations:
           traefik:
             enabled: true
