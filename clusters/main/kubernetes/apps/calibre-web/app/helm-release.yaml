@@ -37,6 +37,15 @@ spec:
         type: nfs 
         path: /mnt/AI_Storage/Calibre_library
         server: "10.0.10.10"
+    service:
+      main:
+        type: LoadBalancer
+        loadBalancerIP: 10.0.10.80
+        ports:
+          main:
+            port: 80
+            protocol: http
+            targetPort: 8083
     ingress:
       main:
         enabled: true
