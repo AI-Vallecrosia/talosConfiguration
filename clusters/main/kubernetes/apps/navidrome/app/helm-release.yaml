@@ -39,16 +39,16 @@ spec:
       main:
         enabled: true
         hosts:
-          - host: navidrome.cloud.local
+          - host: navidrome.aivallecrosia.com
             paths:
               - path: /
-          - host: navidrome.aivallecrosia.com
+          - host: navidrome.cloud.local
             paths:
               - path: /
         tls:
           - hosts:
-              - navidrome.cloud.local
               - navidrome.aivallecrosia.com
+              - navidrome.cloud.local
         integrations:
           traefik:
             enabled: true
