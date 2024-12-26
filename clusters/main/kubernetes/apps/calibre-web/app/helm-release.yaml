@@ -49,5 +49,12 @@ spec:
               - calibre-web.cloud.local
         integrations:
           traefik:
-            enabled: true
+            enabled: true 
+     service:
+      main:
+        type: LoadBalancer
+        loadBalancerIP: 10.0.10.76
+        ports:
+          main:
+            port: 8083
    
