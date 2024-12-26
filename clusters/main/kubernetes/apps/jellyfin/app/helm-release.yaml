@@ -50,4 +50,11 @@ spec:
         integrations:
           traefik:
             enabled: true
+    service:
+      main:
+        type: LoadBalancer
+        loadBalancerIP: 10.0.10.75
+        ports:
+          main:
+            port: 8096
    
