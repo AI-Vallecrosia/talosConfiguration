@@ -41,20 +41,17 @@ spec:
       main:
         enabled: true
         hosts:
-          - host: calibre-web.cloud.local
+          - host: calibre.aivallecrosia.com
+            paths:
+              - path: /
+          - host: calibre.cloud.local
             paths:
               - path: /
         tls:
           - hosts:
-              - calibre-web.cloud.local
+              - calibre.aivallecrosia.com
+              - calibre.cloud.local
         integrations:
           traefik:
             enabled: true 
-    service:
-      main:
-        type: LoadBalancer
-        loadBalancerIP: 10.0.10.76
-        ports:
-          main:
-            port: 8083
    
